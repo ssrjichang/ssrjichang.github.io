@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://ssrjichang.github.io/news/article-110368.htm" />
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>利用策略模式+单例模式+反射 替换if-else</title>
+        <meta name="description" content="背景啥的就不讲了哈。有这方面需求或者感兴趣的阔以看看。 假定有这样的一种情况，需要根据用户传入的参数，选择不同的数据库来进行相应的操作。 普通的if-else来实现的话，就类似如下代码： public" />
+        <link rel="icon" href="/assets/website/img/clashvergenode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="SSR机场 机场节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ssrjichang.github.io/news/article-110368.htm" />
+    <meta property="og:site_name" content="SSR机场 机场节点官网" />
+    <meta property="og:title" content="利用策略模式+单例模式+反射 替换if-else" />
+    <meta property="og:image" content="https://ssrjichang.github.io/uploads/20240519/1064ba7f11a5155c9083c979003986e5.webp" />
+        <meta property="og:release_date" content="2025-05-03T10:28:14" />
+    <meta property="og:updated_time" content="2025-05-03T10:28:14" />
+        <meta property="og:description" content="背景啥的就不讲了哈。有这方面需求或者感兴趣的阔以看看。 假定有这样的一种情况，需要根据用户传入的参数，选择不同的数据库来进行相应的操作。 普通的if-else来实现的话，就类似如下代码： public" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Place favicon.ico in the root directory -->
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="/assets/website/css/clashvergenode/bootstrap-5.0.0-beta2.min.css" />
+    <link rel="stylesheet" href="/assets/website/css/clashvergenode/LineIcons.2.0.css" />
+    <link rel="stylesheet" href="/assets/website/css/clashvergenode/tiny-slider.css" />
+    <link rel="stylesheet" href="/assets/website/css/clashvergenode/animate.css" />
+    <link rel="stylesheet" href="/assets/website/css/clashvergenode/main.css" />
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="利用策略模式+单例模式+反射 替换if-else">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M5ZFRTLZRS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M5ZFRTLZRS');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+<!-- ========================= preloader start ========================= -->
+<div class="preloader">
+    <div class="loader">
+        <div class="spinner">
+            <div class="spinner-container">
+                <div class="spinner-rotator">
+                    <div class="spinner-left">
+                        <div class="spinner-circle"></div>
+                    </div>
+                    <div class="spinner-right">
+                        <div class="spinner-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- preloader end -->
+<!-- ========================= header start ========================= -->
+<header class="header">
+    <div class="navbar-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="/">
+                                                    <span>SSR机场</span>
+                                                </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                            <ul id="nav" class="navbar-nav ms-auto">
+                                                                <li class="nav-item">
+                                    <a href="/">首页</a>
+                                </li>
+                                                                <li class="nav-item">
+                                    <a href="/free-nodes/">免费节点</a>
+                                </li>
+                                                                <li class="nav-item">
+                                    <a href="/paid-subscribe/">推荐机场</a>
+                                </li>
+                                                                <li class="nav-item">
+                                    <a href="/news/">新闻资讯</a>
+                                </li>
+                                                                <li class="nav-item">
+                                    <a href="/client.htm">客户端</a>
+                                </li>
+                                                            </ul>
+                        </div>
+                        <!-- navbar collapse -->
+                    </nav>
+                    <!-- navbar -->
+                </div>
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </div>
+    <!-- navbar area -->
+</header>
+<!-- ========================= header end ========================= -->
+    <!-- ========================= hero-section start ========================= -->
+    <section id="category" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="wow fadeInUp" data-wow-delay=".4s">
+                            利用策略模式+单例模式+反射 替换if-else                        </h1>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-img wow fadeInUp" data-wow-delay=".5s">
+                        <img src="/assets/website/img/clashvergenode/hero/hero-img.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========================= hero-section end ========================= -->
+    <!-- ========================= about-section start ========================= -->
+    <section id="about" class="about-section pt-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="htmledit_views"> <p>背景啥的就不讲了哈。有这方面需求或者感兴趣的阔以看看。</p> <p>假定有这样的一种情况，需要根据用户传入的参数，选择不同的数据库来进行相应的操作。</p> <p>普通的if-else来实现的话，就类似如下代码：</p> <pre><code class="language-java">public static void main(String[] args) {         String type="hbase";         if (type.equals(DbTypeEnum.MYSQL_DRIVER.type())){             MySQL mySQL=new MySQL();             mySQL.getConnect();             mySQL.excute();             mySQL.disconnect();         }else if (type.equals(DbTypeEnum.HBASE_DRIVER.type())){             Hbase hbase=new Hbase();             hbase.getConnect();             hbase.excute();             hbase.disconnect();         }else if (type.equals(DbTypeEnum.MONGO_DRIVER.type())){             Mongo mongo=new Mongo();             mongo.getConnect();             mongo.excute();             mongo.disconnect();         }else if (type.equals(DbTypeEnum.ORCAL_DRIVER.type())){             Orcal orcal=new Orcal();             orcal.getConnect();             orcal.excute();             orcal.disconnect();         }else if (type.equals(DbTypeEnum.SQLSERVER_DRIVER.type())){             SqlServer sqlServer=new SqlServer();             sqlServer.getConnect();             sqlServer.excute();             sqlServer.disconnect();         }else{             System.out.println("did not have this database");         }//逻辑异常 可以提前     }</code></pre> <p></p> <p>这里的DbTypeEnum是一个枚举类，没啥多讲的，有兴趣的自行baidu。</p> <pre><code class="language-java">public enum DbTypeEnum {      MYSQL_DRIVER("mysql"),      ORCAL_DRIVER("orcal"),      SQLSERVER_DRIVER("sqlserver"),      HBASE_DRIVER("hbase"),      MONGO_DRIVER("mogon")     ;      private String type;      private DbTypeEnum(String type){         this.type=type;     }      public String type() {         return type;     } }</code></pre> <p>至于Mysql,Orcal等等，单纯就是一个普通的类。</p> <pre><code class="language-java">public class MySQL {      public void getConnect(){         System.out.println("mysql connect");     }      public void excute(){         System.out.println("mysql excute sql");     }      public void disconnect(){         System.out.println("mysql disconnect");     }  }</code></pre> <p>其他就不贴了。</p> <p>以上就是普通做法，用if-else来进行判定，可以看出来这里臃肿。</p> <p>如果要用其他方式替换掉，怎么办呢？</p> <p>请让老夫慢慢道来。</p> <p>首先创建一个DbStrategy接口。</p> <pre><code class="language-java">public interface DbStrategy {      public void excute();  }</code></pre> <p>然后各个数据库操作类实现它。</p> <pre><code class="language-java">public class MySqlStrategy implements DbStrategy{     @Override     public void excute() {         MySQL mySQL=new MySQL();         mySQL.getConnect();         mySQL.excute();         mySQL.disconnect();     } }</code></pre> <p>其他HbaseStrategy啥的就不贴了哈。</p> <p>到这里其实没有做太多的改变。无非就是把数据库的三个操作connect excute disconnect合在了一个excute类里面。</p> <p>接下来就是重点了。</p> <p>我们改造下DbTypeEnum将他改造成RefelDbTypeEnum。</p> <pre><code class="language-java">public enum RefelDbTypeEnum {      MYSQL_DRIVER("mysql","optimization.ifelse.strategy.MySqlStrategy"),      ORCAL_DRIVER("orcal","optimization.ifelse.strategy.OrcalStrategy"),      SQLSERVER_DRIVER("sqlserver","optimization.ifelse.strategy.SqlServerStrategy"),      HBASE_DRIVER("hbase","optimization.ifelse.strategy.HbaseStrategy"),      MONGO_DRIVER("mogon","optimization.ifelse.strategy.MongoStrategy"),     ;      private String type;     private String clazz;      private RefelDbTypeEnum(String type,String clazz){         this.type=type;         this.clazz=clazz;     }      public String type() {         return type;     }      public String clazz(){         return  clazz;     } }</code></pre> <p>与DbTypeEnum相比多了一个String clazz的属性。至于为什么要这样改，先不急，后面再讲。</p> <p>最核心的部分来了哈。</p> <p>新建一个ManagerStrategy管理类。</p> <pre><code class="language-java">public class ManagerStrategy {      private static Map&lt;String,String&gt; strategyMap = new HashMap&lt;&gt;();      public static void excuteStrategy(String type){         for (RefelDbTypeEnum t : RefelDbTypeEnum.values())             strategyMap.put(t.type(), t.clazz());         String class_path=strategyMap.get(type);         try {             /*              * 通过反射将RefelDbTypeEnum中映射的类实例化              * */             Class clazz=Class.forName(class_path);             Method excute =clazz.getDeclaredMethod("excute");             excute.invoke(clazz.newInstance());         } catch (ClassNotFoundException e) {             e.printStackTrace();         } catch (NoSuchMethodException e) {             e.printStackTrace();         } catch (IllegalAccessException e) {             e.printStackTrace();         } catch (InvocationTargetException e) {             e.printStackTrace();         } catch (InstantiationException e) {             e.printStackTrace();         }     } }</code></pre> <p>这里先是将RefelDbTypeEnum中的type和clazz属性读到了一个strategyMap的HashMap中。</p> <p>然后根据用户传入的type判断要实例化哪个类。</p> <p>如果传入的是mysql则class_path=<span style="color:#008000;font-weight:bold;">optimization.ifelse.strategy.MySqlStrategy</span></p> <p>通过Class.forName反射出该对象，并且执行其中的excute方法。</p> <p>这里的class_path就是改造RefelDbTypeEnum中的包路径了。</p> <p>这样就实现替换if-else了。</p> <p>接下来是测试类：</p> <pre><code class="language-java"> public static void main(String[] args) {         String type="mysql";         ManagerStrategy.excuteStrategy(type);     }</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230206/11bec880c3459e8fdad07652d4287eb5.jpg" alt="利用策略模式+单例模式+反射 替换if-else"></p> <p>满足需求。</p> <p>倘若如果是新增了一个ES数据库呢？</p> <p>同样新建一个EsStrategy类实现DbStrategy接口。</p> <pre><code class="language-java">public class EsStrategy implements DbStrategy{     @Override     public void excute() {         System.out.println("ES connect");         System.out.println("ES excute sql");         System.out.println("ES disconnect");     } }</code></pre> <p>之后，只需要在RefelDbTypeEnum，多添加一个ES的映射就行了。</p> <pre><code class="language-java">ES_DRIVER("es","optimization.ifelse.strategy.EsStrategy")</code></pre> <p>这里就可以看出来用设计模式的好处了，真正只有一个RefelDbTypeEnum的枚举类被改变了，就可以集成一个新的数据库操作类。</p> <p>细心的人其实已经发现了。</p> <p>上面的ManagerStrategy管理类其实有点问题。</p> <p>因为每次调用excuteStrategy的时候都会重复将RefelDbTypeEnum中的type和clazz属性读到了一个strategyMap的HashMap中，这样是不合理的。</p> <p>所以下面用了一个单例模式来解决这个问题。</p> <p>新建一个StrategySingleton。</p> <pre><code class="language-java">public class StrategySingleton {      /*     * 单例模式     * */     private static StrategySingleton instance=null;      private StrategySingleton(){     }      private static synchronized void syncInit() {         if (instance == null) {             instance = new StrategySingleton();         }     }      public static StrategySingleton getInstance() {         if (instance == null) {             syncInit();         }         return instance;     }      private static Map&lt;String,String&gt; strategyMap = new HashMap&lt;&gt;();     static{         for (RefelDbTypeEnum t : RefelDbTypeEnum.values())             strategyMap.put(t.type(), t.clazz());     }     public String strategy(String type){         return strategyMap.get(type);     } }</code></pre> <p>单例模式就不具体讲了哈，有兴趣的同学自行去了解。</p> <p>同时重新改造ManagerStrategy管理类。</p> <pre><code class="language-java">public static void excuteStrategy(String type){         String clz=StrategySingleton.getInstance().strategy(type);         try {             /*             * 通过反射将RefelDbTypeEnum中映射的类实例化             * */             Class clazz=Class.forName(clz);             Method excute =clazz.getDeclaredMethod("excute");             excute.invoke(clazz.newInstance());         } catch (ClassNotFoundException e) {             e.printStackTrace();         } catch (NoSuchMethodException e) {             e.printStackTrace();         } catch (IllegalAccessException e) {             e.printStackTrace();         } catch (InvocationTargetException e) {             e.printStackTrace();         } catch (InstantiationException e) {             e.printStackTrace();         }     }</code></pre> <p>如上，全部完成。</p> <p>代码托管地址：</p> <p>https://gitee.com/huangxiaoli/Rem-third-java.git</p> <p>很久没搞Java了，如果有问题请指正。</p> <p>如果还有更好的实现方法，请分享出来哈，三人行，必有师焉。</p> <p></p> <p>PS：PHP是世界上最好的语言。</p> </p></div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-109511.htm">宠物领养数据库设计 宠物领养数据库设计方案</a></p>
+                                        <p>下一个：<a href="/news/article-110374.htm">动物医院大众点评评语大全集 动物医院大众点评评语大全集图片</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-107070.htm" title="唐砖 剧情（唐砖 剧情 30集）">唐砖 剧情（唐砖 剧情 30集）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-27-free-subscribe-node.htm" title="SSR机场 | 4月27日19.8M/S|免费Clash/V2ray/Shadowrocket/SSR订阅链接">SSR机场 | 4月27日19.8M/S|免费Clash/V2ray/Shadowrocket/SSR订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-99078.htm" title="自己可以给狗狗打狂犬疫苗吗（可不可以自己给狗打疫苗）">自己可以给狗狗打狂犬疫苗吗（可不可以自己给狗打疫苗）</a></li>
+                        <li class="py-2"><a href="/news/article-104527.htm" title="宠物猫防疫针多少钱一针疫苗（宠物猫咪疫苗多少钱）">宠物猫防疫针多少钱一针疫苗（宠物猫咪疫苗多少钱）</a></li>
+                        <li class="py-2"><a href="/news/article-97503.htm" title="TypeScript与JavaScript的区别">TypeScript与JavaScript的区别</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-17-free-node-subscribe-links.htm" title="SSR机场 | 4月17日22.1M/S|免费SSR/Shadowrocket/V2ray/Clash订阅链接">SSR机场 | 4月17日22.1M/S|免费SSR/Shadowrocket/V2ray/Clash订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-107846.htm" title="宠物领养协议书范本模板下载大全图片（宠物领养协议文案）">宠物领养协议书范本模板下载大全图片（宠物领养协议文案）</a></li>
+                        <li class="py-2"><a href="/news/article-101232.htm" title="使用缓存(Cache)的几种方式，回顾一下~~~">使用缓存(Cache)的几种方式，回顾一下~~~</a></li>
+                        <li class="py-2"><a href="/news/article-105236.htm" title="接口隔离原则（Interface Segregation Principle，ISP）">接口隔离原则（Interface Segregation Principle，ISP）</a></li>
+                        <li class="py-2"><a href="/news/article-111206.htm" title="怎么找厂家拿一手货源衣服（怎么找厂家拿一手货源衣服呢）">怎么找厂家拿一手货源衣服（怎么找厂家拿一手货源衣服呢）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">42</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========================= about-section end ========================= -->
+        <!-- ========================= footer start ========================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="copy-right">
+                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <p>
+                    SSR机场 机场节点官网 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- ========================= footer end ========================= -->
+    <!-- ========================= JS here ========================= -->
+    <script src="/assets/website/js/frontend/clashvergenode/jquery-3.2.1.min.js"></script>
+    <script src="/assets/website/js/frontend/clashvergenode/bootstrap-5.0.0-beta2.min.js"></script>
+    <script src="/assets/website/js/frontend/clashvergenode/count-up.min.js"></script>
+    <script src="/assets/website/js/frontend/clashvergenode/tiny-slider.js"></script>
+    <script src="/assets/website/js/frontend/clashvergenode/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/clashvergenode/polifill.js"></script>
+    <script src="/assets/website/js/frontend/clashvergenode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
