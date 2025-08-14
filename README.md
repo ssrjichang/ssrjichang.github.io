@@ -1,4 +1,4 @@
-# SSR机场 | 8月8日22.7M/S|免费Clash/Shadowrocket/V2ray/SSR订阅链接  更新时间 2025-08-08 09:03:41
+# SSR机场 | 8月14日20.2M/S|免费SSR/Shadowrocket/V2ray/Clash订阅链接  更新时间 2025-08-14 10:25:56
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://ssrjichang.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### Clash订阅链接
 
-- https://ssrjichang.github.io/uploads/2025/08/0-20250808.yaml
-- https://ssrjichang.github.io/uploads/2025/08/1-20250808.yaml
-- https://ssrjichang.github.io/uploads/2025/08/2-20250808.yaml
-- https://ssrjichang.github.io/uploads/2025/08/3-20250808.yaml
-- https://ssrjichang.github.io/uploads/2025/08/4-20250808.yaml
+- https://ssrjichang.github.io/uploads/2025/08/0-20250814.yaml
+- https://ssrjichang.github.io/uploads/2025/08/1-20250814.yaml
+- https://ssrjichang.github.io/uploads/2025/08/2-20250814.yaml
+- https://ssrjichang.github.io/uploads/2025/08/3-20250814.yaml
+- https://ssrjichang.github.io/uploads/2025/08/4-20250814.yaml
 
 ### V2ray订阅链接
 
-- https://ssrjichang.github.io/uploads/2025/08/0-20250808.txt
-- https://ssrjichang.github.io/uploads/2025/08/1-20250808.txt
-- https://ssrjichang.github.io/uploads/2025/08/2-20250808.txt
-- https://ssrjichang.github.io/uploads/2025/08/3-20250808.txt
-- https://ssrjichang.github.io/uploads/2025/08/4-20250808.txt
+- https://ssrjichang.github.io/uploads/2025/08/0-20250814.txt
+- https://ssrjichang.github.io/uploads/2025/08/1-20250814.txt
+- https://ssrjichang.github.io/uploads/2025/08/2-20250814.txt
+- https://ssrjichang.github.io/uploads/2025/08/3-20250814.txt
+- https://ssrjichang.github.io/uploads/2025/08/4-20250814.txt
 
 ### Sing-box订阅链接
 
-- https://ssrjichang.github.io/uploads/2025/08/20250808.json
+- https://ssrjichang.github.io/uploads/2025/08/20250814.json
 
 ## 更多clash节点订阅 ：
 
