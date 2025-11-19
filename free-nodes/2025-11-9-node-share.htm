@@ -392,6 +392,21 @@ A6: 在配置文件中添加多个 <code data-start="3254" data-end="3265">outbo
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Potatso Lite 是否支持 Vless？</h5></div>
+    <div class="panel-body">
+        目前 Potatso Lite 仅支持 Shadowsocks 和 Vmess 协议，不支持 Vless。但开发者正在逐步扩展功能，未来可能加入更多现代代理协议支持。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>WinXray 延迟检测功能如何提高网络体验？</h5></div>
+    <div class="panel-body">
+        WinXray 会定期检测节点延迟，结合策略组自动切换到低延迟节点。保证网页、视频和游戏流量通过最佳节点，提高访问速度和连接稳定性，减少掉线和卡顿。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hiddify Next 如何设置用户带宽限制？</h5></div>
+    <div class="panel-body">
+        管理员可为每个用户设置独立带宽和流量配额，超出时可自动降速或阻止访问。这样可确保服务器资源合理分配，避免单用户占用过多带宽，提高整体网络效率和公平性。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Trojan TLS 如何避免被 DPI 检测？</h5></div>
     <div class="panel-body">
         通过选择真实可访问域名并使用有效证书，Trojan 流量可完全模拟 HTTPS 请求。隐藏真实流量特征，降低被封锁和 DPI 检测风险，保证节点长期可用。<hr />    </div>
@@ -402,34 +417,9 @@ A6: 在配置文件中添加多个 <code data-start="3254" data-end="3265">outbo
         SSR 支持 UDP 转发，可通过客户端设置开启。启用后，游戏和语音等 UDP 流量可通过节点代理，降低丢包率和延迟，提高实时网络应用体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS 是否比 Trojan 更稳定？</h5></div>
-    <div class="panel-body">
-        两者都非常稳定，但 VLESS 在多平台兼容性上略优，而 Trojan 在 HTTPS 伪装和 TLS 安全性上更强。选择取决于服务器环境与具体需求，两者皆为高性能协议。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何在 Sing-box 中设置多个 outbound 实现策略路由？</h5></div>
-    <div class="panel-body">
-        在 sing-box 的配置中定义多个 outbound 对象并为 routing 模块配置 rules，将不同目的地或应用流量指向对应 outbound，从而实现分流、负载均衡或故障转移等复杂路由策略。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 的策略组如何实现按域名分流？</h5></div>
-    <div class="panel-body">
-        Sing-box 支持根据域名规则匹配流量，将不同网站或应用流量分配到指定节点。结合策略组自动切换低延迟节点，可优化访问速度，保证网络稳定性和流畅体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>VMess 的 WebSocket + TLS 配置有哪些好处？</h5></div>
     <div class="panel-body">
         WebSocket + TLS 可伪装为普通 HTTPS 流量，增强抗封锁能力和隐蔽性。结合域名伪装和策略组使用，可以在高封锁网络中保持稳定、高速和安全的网络访问体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 如何设置用户带宽限制？</h5></div>
-    <div class="panel-body">
-        管理员可为每个用户设置独立带宽和流量配额，超出时可自动降速或阻止访问。这样可确保服务器资源合理分配，避免单用户占用过多带宽，提高整体网络效率和公平性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 是否支持 Vless？</h5></div>
-    <div class="panel-body">
-        目前 Potatso Lite 仅支持 Shadowsocks 和 Vmess 协议，不支持 Vless。但开发者正在逐步扩展功能，未来可能加入更多现代代理协议支持。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Mihomo 的日志功能如何开启？</h5></div>
@@ -437,9 +427,19 @@ A6: 在配置文件中添加多个 <code data-start="3254" data-end="3265">outbo
         Mihomo 的日志默认关闭以节省性能。若需调试，可在配置文件中启用 `log-level: debug` 参数，日志将输出详细连接信息与错误提示，便于排查问题。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 延迟检测功能如何提高网络体验？</h5></div>
+    <div class="panel-heading"><h5>VLESS 是否比 Trojan 更稳定？</h5></div>
     <div class="panel-body">
-        WinXray 会定期检测节点延迟，结合策略组自动切换到低延迟节点。保证网页、视频和游戏流量通过最佳节点，提高访问速度和连接稳定性，减少掉线和卡顿。    </div>
+        两者都非常稳定，但 VLESS 在多平台兼容性上略优，而 Trojan 在 HTTPS 伪装和 TLS 安全性上更强。选择取决于服务器环境与具体需求，两者皆为高性能协议。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 的策略组如何实现按域名分流？</h5></div>
+    <div class="panel-body">
+        Sing-box 支持根据域名规则匹配流量，将不同网站或应用流量分配到指定节点。结合策略组自动切换低延迟节点，可优化访问速度，保证网络稳定性和流畅体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何在 Sing-box 中设置多个 outbound 实现策略路由？</h5></div>
+    <div class="panel-body">
+        在 sing-box 的配置中定义多个 outbound 对象并为 routing 模块配置 rules，将不同目的地或应用流量指向对应 outbound，从而实现分流、负载均衡或故障转移等复杂路由策略。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -468,16 +468,16 @@ A6: 在配置文件中添加多个 <code data-start="3254" data-end="3265">outbo
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-11-3-clash-node.htm" title="SSR机场 - 11月3日18.6M/S|免费Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 11月3日18.6M/S|免费Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-14-clash-meta-github.htm" title="SSR机场 - 10月14日22.2M/S|免费Shadowrocket节点/V2ray节点/Clash节点/SSR节点/Singbox节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 10月14日22.2M/S|免费Shadowrocket节点/V2ray节点/Clash节点/SSR节点/Singbox节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-27-clash-node-github.htm" title="SSR机场 - 10月27日19.7M/S|免费Singbox节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 10月27日19.7M/S|免费Singbox节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-10-clash-verge-rev-node-share.htm" title="SSR机场 - 10月10日21M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Singbox节点/Clash节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 10月10日21M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Singbox节点/Clash节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-8-clash-verge-rev-github.htm" title="SSR机场 - 11月8日20.5M/S|免费Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 11月8日20.5M/S|免费Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点节点推荐，V2rayC梯子购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-10-17-clash-verge-rev-node.htm" title="SSR机场 - 10月17日20.7M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/SSR节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 10月17日20.7M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-4-clash-verge-rev-windows.htm" title="SSR机场 - 11月4日21.9M/S|免费Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/SSR节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 11月4日21.9M/S|免费Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-11-clash-node.htm" title="SSR机场 - 11月11日22.5M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Clash节点/V2ray节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 11月11日22.5M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Clash节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-19-clash-stash-node.htm" title="SSR机场 - 10月19日21.5M/S|免费Clash节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 10月19日21.5M/S|免费Clash节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-8-node-share.htm" title="SSR机场 - 10月8日19.8M/S|免费Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 10月8日19.8M/S|免费Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-15-clash-verge-rev-node-share.htm" title="SSR机场 - 10月15日18.7M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Singbox节点/Clash节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 10月15日18.7M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Singbox节点/Clash节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-9-node-share.htm" title="SSR机场 - 11月9日18.6M/S|免费Clash节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 11月9日18.6M/S|免费Clash节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-27-clash-node-github.htm" title="SSR机场 - 10月27日19.7M/S|免费Singbox节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 10月27日19.7M/S|免费Singbox节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-2-clash-verge-rev-node-github.htm" title="SSR机场 - 11月2日20.8M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 11月2日20.8M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-14-clash-meta-github.htm" title="SSR机场 - 10月14日22.2M/S|免费Shadowrocket节点/V2ray节点/Clash节点/SSR节点/Singbox节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 10月14日22.2M/S|免费Shadowrocket节点/V2ray节点/Clash节点/SSR节点/Singbox节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-12-clash-v2ray-ss-ssr.htm" title="SSR机场 - 11月12日21.2M/S|免费SSR节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 11月12日21.2M/S|免费SSR节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-5-clash-stash.htm" title="SSR机场 - 10月5日21.3M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 10月5日21.3M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-1-clash-stash-node.htm" title="SSR机场 - 11月1日19.1M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Clash节点/V2ray节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 11月1日19.1M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Clash节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-14-clash-stash-node.htm" title="SSR机场 - 11月14日19.7M/S|免费Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 11月14日19.7M/S|免费Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点节点推荐，V2rayC梯子购买推荐</a></li>
                     </ul>
     </div>
 </div>
@@ -489,7 +489,7 @@ A6: 在配置文件中添加多个 <code data-start="3254" data-end="3265">outbo
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">11</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
