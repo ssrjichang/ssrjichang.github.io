@@ -346,31 +346,6 @@ A5：不必强制每日更换，但应在发现节点失效或网络不稳定时
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS 相比 VMess 的主要改进是什么？</h5></div>
-    <div class="panel-body">
-        VLESS 是 VMess 的后继协议，移除了加密层以减少服务器资源消耗，同时提供更灵活的加密与传输方式选择。它更轻量、可扩展性更好，常被用于与 XTLS 等新传输协议搭配使用。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何在 Windows 上安装 Clash for Windows？</h5></div>
-    <div class="panel-body">
-        在 Windows 上安装 Clash for Windows 十分简单。只需前往官方 GitHub 页面下载最新版安装包，运行安装程序后导入订阅链接或配置文件即可。安装完成后，用户可以通过图形化界面方便地切换节点、编辑规则和控制代理模式。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS + XTLS 对高延迟网络有哪些优化？</h5></div>
-    <div class="panel-body">
-        XTLS 模式减少握手和加密开销，适合高延迟或不稳定网络环境。结合策略组和节点切换，可提高网页浏览、视频播放和游戏的稳定性和流畅度，改善用户体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的规则订阅更新频率如何设置？</h5></div>
-    <div class="panel-body">
-        Clash 支持设置订阅规则的更新频率，例如每小时或每天。定期更新可保证节点和规则最新，减少手动维护，提高访问速度和分流效率，同时保持网络稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Quantumult X 的分流规则如何设置？</h5></div>
-    <div class="panel-body">
-        Quantumult X 通过规则分组来控制流量走向。用户可自定义策略组，将特定网站流量指向不同节点。编辑规则文件时，可利用 GEOIP、DOMAIN-SUFFIX 等指令精确管理网络行为。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Surfboard 如何结合策略组实现智能分流？</h5></div>
     <div class="panel-body">
         Surfboard 可根据策略组和规则文件自动选择最优节点处理流量。不同应用或网站可分配不同节点，保证低延迟和高速访问，同时减少手动切换节点的操作。<hr />    </div>
@@ -381,9 +356,19 @@ A5：不必强制每日更换，但应在发现节点失效或网络不稳定时
         检查订阅 URL 是否有效并确保网络通畅。可手动刷新或重新添加订阅链接，保证节点列表最新。结合策略组使用，确保稳定科学上网体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Quantumult X 的分流规则如何设置？</h5></div>
+    <div class="panel-body">
+        Quantumult X 通过规则分组来控制流量走向。用户可自定义策略组，将特定网站流量指向不同节点。编辑规则文件时，可利用 GEOIP、DOMAIN-SUFFIX 等指令精确管理网络行为。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Sing-box 可以替换 Clash 配置文件吗？</h5></div>
     <div class="panel-body">
         Sing-box 支持直接解析 Clash YAML 配置，并转换为自身 JSON 格式。节点、策略组和规则基本兼容，但部分自定义脚本可能需要手动调整才能完全使用。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VLESS 相比 VMess 的主要改进是什么？</h5></div>
+    <div class="panel-body">
+        VLESS 是 VMess 的后继协议，移除了加密层以减少服务器资源消耗，同时提供更灵活的加密与传输方式选择。它更轻量、可扩展性更好，常被用于与 XTLS 等新传输协议搭配使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Shadowrocket 如何实现节点自动切换？</h5></div>
@@ -393,7 +378,22 @@ A5：不必强制每日更换，但应在发现节点失效或网络不稳定时
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS + XTLS 模式在高并发环境中表现如何？</h5></div>
     <div class="panel-body">
-        XTLS 模式减少握手和加密开销，提高吞吐量和 CPU 利用率。在高并发环境下，能够保持连接稳定，适合游戏、视频和高频请求的网络场景，提高整体性能。    </div>
+        XTLS 模式减少握手和加密开销，提高吞吐量和 CPU 利用率。在高并发环境下，能够保持连接稳定，适合游戏、视频和高频请求的网络场景，提高整体性能。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何在 Windows 上安装 Clash for Windows？</h5></div>
+    <div class="panel-body">
+        在 Windows 上安装 Clash for Windows 十分简单。只需前往官方 GitHub 页面下载最新版安装包，运行安装程序后导入订阅链接或配置文件即可。安装完成后，用户可以通过图形化界面方便地切换节点、编辑规则和控制代理模式。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 的规则订阅更新频率如何设置？</h5></div>
+    <div class="panel-body">
+        Clash 支持设置订阅规则的更新频率，例如每小时或每天。定期更新可保证节点和规则最新，减少手动维护，提高访问速度和分流效率，同时保持网络稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VLESS + XTLS 对高延迟网络有哪些优化？</h5></div>
+    <div class="panel-body">
+        XTLS 模式减少握手和加密开销，适合高延迟或不稳定网络环境。结合策略组和节点切换，可提高网页浏览、视频播放和游戏的稳定性和流畅度，改善用户体验。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -422,16 +422,16 @@ A5：不必强制每日更换，但应在发现节点失效或网络不稳定时
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-11-22-free-node-subscribe.htm" title="SSR机场 - 11月22日19M/S|免费Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 11月22日19M/S|免费Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-9-node-share.htm" title="SSR机场 - 11月9日18.6M/S|免费Clash节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 11月9日18.6M/S|免费Clash节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-4-clash-verge-rev-windows.htm" title="SSR机场 - 11月4日21.9M/S|免费Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/SSR节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 11月4日21.9M/S|免费Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-7-clash-v2ray-ss-ssr.htm" title="SSR机场 - 10月7日20.8M/S|免费V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 10月7日20.8M/S|免费V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-23-clash-verge-rev-node-github.htm" title="SSR机场 - 10月23日21.7M/S|免费Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 10月23日21.7M/S|免费Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-12-clash-stash-node.htm" title="SSR机场 - 10月12日18.2M/S|免费Singbox节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 10月12日18.2M/S|免费Singbox节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-14-clash-meta-github.htm" title="SSR机场 - 10月14日22.2M/S|免费Shadowrocket节点/V2ray节点/Clash节点/SSR节点/Singbox节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 10月14日22.2M/S|免费Shadowrocket节点/V2ray节点/Clash节点/SSR节点/Singbox节点节点推荐，V2rayC梯子购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-3-clash-node.htm" title="SSR机场 - 11月3日18.6M/S|免费Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 11月3日18.6M/S|免费Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-28-clash-node-github.htm" title="SSR机场 - 11月28日21.8M/S|免费Clash节点/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 11月28日21.8M/S|免费Clash节点/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-1-clash-stash-node.htm" title="SSR机场 - 11月1日19.1M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Clash节点/V2ray节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 11月1日19.1M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Clash节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-10-26-clash-verge-rev-node-github.htm" title="SSR机场 - 10月26日18.8M/S|免费Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 10月26日18.8M/S|免费Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-7-clash-verge-rev-windows.htm" title="SSR机场 - 11月7日22.2M/S|免费Clash节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 11月7日22.2M/S|免费Clash节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-18-free-node-subscribe.htm" title="SSR机场 - 11月18日19.4M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Singbox节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 11月18日19.4M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Singbox节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-11-clash-node.htm" title="SSR机场 - 11月11日22.5M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Clash节点/V2ray节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 11月11日22.5M/S|免费Shadowrocket节点/Singbox节点/SSR节点/Clash节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-5-clash-stash.htm" title="SSR机场 - 10月5日21.3M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 10月5日21.3M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-20-clash-node-daily-updates.htm" title="SSR机场 - 11月20日20M/S|免费SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 11月20日20M/S|免费SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-16-clash-verge-rev-node-github.htm" title="SSR机场 - 10月16日20.7M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 10月16日20.7M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点节点推荐，V2rayC梯子购买推荐</a></li>
                     </ul>
     </div>
 </div>
@@ -443,7 +443,7 @@ A5：不必强制每日更换，但应在发现节点失效或网络不稳定时
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
