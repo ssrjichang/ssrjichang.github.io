@@ -1,4 +1,4 @@
-# SSR机场 - 12月13日18.7M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点节点推荐，V2rayC梯子购买推荐  更新时间 2025-12-13 09:38:36
+# SSR机场 - 12月20日22.1M/S|免费Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，V2rayC梯子购买推荐  更新时间 2025-12-20 09:20:39
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://ssrjichang.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://ssrjichang.github.io/uploads/2025/12/0-20251213.yaml
-- https://ssrjichang.github.io/uploads/2025/12/1-20251213.yaml
-- https://ssrjichang.github.io/uploads/2025/12/2-20251213.yaml
-- https://ssrjichang.github.io/uploads/2025/12/3-20251213.yaml
-- https://ssrjichang.github.io/uploads/2025/12/4-20251213.yaml
+- https://ssrjichang.github.io/uploads/2025/12/0-20251220.yaml
+- https://ssrjichang.github.io/uploads/2025/12/1-20251220.yaml
+- https://ssrjichang.github.io/uploads/2025/12/2-20251220.yaml
+- https://ssrjichang.github.io/uploads/2025/12/3-20251220.yaml
+- https://ssrjichang.github.io/uploads/2025/12/4-20251220.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://ssrjichang.github.io/uploads/2025/12/0-20251213.txt
-- https://ssrjichang.github.io/uploads/2025/12/1-20251213.txt
-- https://ssrjichang.github.io/uploads/2025/12/2-20251213.txt
-- https://ssrjichang.github.io/uploads/2025/12/3-20251213.txt
-- https://ssrjichang.github.io/uploads/2025/12/4-20251213.txt
+- https://ssrjichang.github.io/uploads/2025/12/0-20251220.txt
+- https://ssrjichang.github.io/uploads/2025/12/1-20251220.txt
+- https://ssrjichang.github.io/uploads/2025/12/2-20251220.txt
+- https://ssrjichang.github.io/uploads/2025/12/3-20251220.txt
+- https://ssrjichang.github.io/uploads/2025/12/4-20251220.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://ssrjichang.github.io/uploads/2025/12/20251213.json
+- https://ssrjichang.github.io/uploads/2025/12/20251220.json
 
 ## 更多Clash节点订阅 ：
 
