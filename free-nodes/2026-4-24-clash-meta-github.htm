@@ -333,14 +333,9 @@ A5：下载官方渠道的软件，避免使用未知来源，设置复杂密码
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>QuantumultX 的脚本功能能实现哪些高级操作？</h5></div>
+    <div class="panel-heading"><h5>Hysteria2 多路复用如何优化高频短连接？</h5></div>
     <div class="panel-body">
-        QuantumultX 支持 JavaScript 脚本，可用于请求重写、数据修改、自动签到、广告拦截等功能。用户可通过脚本中心导入开源脚本，极大增强应用的灵活性与自动化能力。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 支持 Reality 吗？</h5></div>
-    <div class="panel-body">
-        支持。Hiddify Next 基于 sing-box 内核，可加载 Vless+Reality、Trojan+TLS 等高级协议配置。用户可直接导入机场订阅，无需手动修改复杂参数。<hr />    </div>
+        多路复用允许多个短连接共享同一通道，减少握手次数和加密开销。适合游戏和即时通讯等高频短连接场景，提高吞吐量和连接稳定性，保证流量快速传输。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Mihomo 启动后 CPU 占用高，有哪些优化建议？</h5></div>
@@ -353,14 +348,19 @@ A5：下载官方渠道的软件，避免使用未知来源，设置复杂密码
         策略组会根据节点延迟和丢包率选择最佳节点。结合路由规则，可保证国内流量直连、海外流量走最优节点，提高访问速度和连接稳定性，优化整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>如何在 V2Ray 中自定义路由规则？</h5></div>
-    <div class="panel-body">
-        在 V2Ray 中可以通过修改 config.json 文件中的 routing 部分来自定义路由规则。用户可以根据 IP 段、域名或地理位置来决定流量的去向，从而实现自动分流或访问加速的效果。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Surfboard 是否支持 Clash 配置？</h5></div>
     <div class="panel-body">
         Surfboard 是一款支持多种协议的客户端应用，它能够兼容 Clash 的配置文件格式，用户只需导入 YAML 文件即可。该应用以轻量、高速著称，常用于 iOS 和 macOS 系统。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>QuantumultX 的脚本功能能实现哪些高级操作？</h5></div>
+    <div class="panel-body">
+        QuantumultX 支持 JavaScript 脚本，可用于请求重写、数据修改、自动签到、广告拦截等功能。用户可通过脚本中心导入开源脚本，极大增强应用的灵活性与自动化能力。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hiddify Next 支持 Reality 吗？</h5></div>
+    <div class="panel-body">
+        支持。Hiddify Next 基于 sing-box 内核，可加载 Vless+Reality、Trojan+TLS 等高级协议配置。用户可直接导入机场订阅，无需手动修改复杂参数。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS + XTLS 模式在移动网络下的优势是什么？</h5></div>
@@ -368,19 +368,19 @@ A5：下载官方渠道的软件，避免使用未知来源，设置复杂密码
         XTLS 模式减少握手次数和加密开销，适合高延迟或不稳定的移动网络。结合策略组和多出口节点使用，可提高访问速度和连接稳定性，保证用户体验流畅可靠。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 多路复用如何优化高频短连接？</h5></div>
+    <div class="panel-heading"><h5>PassWall2 支持哪些内核？</h5></div>
     <div class="panel-body">
-        多路复用允许多个短连接共享同一通道，减少握手次数和加密开销。适合游戏和即时通讯等高频短连接场景，提高吞吐量和连接稳定性，保证流量快速传输。<hr />    </div>
+        PassWall2 支持多种代理内核，如 Xray、V2Ray、Sing-box、Trojan-go、Hysteria2 等。用户可在插件管理中切换所需内核，以获得不同协议与性能的支持。部分内核需手动下载并启用。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何在 V2Ray 中自定义路由规则？</h5></div>
+    <div class="panel-body">
+        在 V2Ray 中可以通过修改 config.json 文件中的 routing 部分来自定义路由规则。用户可以根据 IP 段、域名或地理位置来决定流量的去向，从而实现自动分流或访问加速的效果。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>如何将 Windows 上的 V2Ray 与 WSL 环境联合调试？</h5></div>
     <div class="panel-body">
-        在 WSL 内运行需要的调试工具并通过 localhost 或将 V2Ray 监听地址绑定为 0.0.0.0，然后在 Windows 与 WSL 之间配置端口映射。注意 Windows 防火墙规则需允许 WSL 与 Windows 进程通信。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 支持哪些内核？</h5></div>
-    <div class="panel-body">
-        PassWall2 支持多种代理内核，如 Xray、V2Ray、Sing-box、Trojan-go、Hysteria2 等。用户可在插件管理中切换所需内核，以获得不同协议与性能的支持。部分内核需手动下载并启用。    </div>
+        在 WSL 内运行需要的调试工具并通过 localhost 或将 V2Ray 监听地址绑定为 0.0.0.0，然后在 Windows 与 WSL 之间配置端口映射。注意 Windows 防火墙规则需允许 WSL 与 Windows 进程通信。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -409,16 +409,16 @@ A5：下载官方渠道的软件，避免使用未知来源，设置复杂密码
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-4-21-clash-verge-rev-nodes.htm" title="SSR机场 - 4月21日23M/S|免费V2ray节点/Clash节点/Trojan节点/Singbox节点/Shadowrocket节点/SSR节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 4月21日23M/S|免费V2ray节点/Clash节点/Trojan节点/Singbox节点/Shadowrocket节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-7-clash-verge-rev-node-github.htm" title="SSR机场 - 3月7日18.9M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Trojan节点/SSR节点/Singbox节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 3月7日18.9M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Trojan节点/SSR节点/Singbox节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-25-clash-stash-node.htm" title="SSR机场 - 3月25日18.6M/S|免费Trojan节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 3月25日18.6M/S|免费Trojan节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-5-clash-v2ray-ss-ssr.htm" title="SSR机场 - 5月5日18M/S|免费V2ray节点/Trojan节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 5月5日18M/S|免费V2ray节点/Trojan节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-4-16-clash-stash.htm" title="SSR机场 - 4月16日21.8M/S|免费V2ray节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点/Clash节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 4月16日21.8M/S|免费V2ray节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点/Clash节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-25-clash-node-github.htm" title="SSR机场 - 4月25日22.1M/S|免费Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Trojan节点/Singbox节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 4月25日22.1M/S|免费Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Trojan节点/Singbox节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-19-free-node-subscribe.htm" title="SSR机场 - 3月19日19.8M/S|免费Clash节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 3月19日19.8M/S|免费Clash节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-6-clash-meta-github.htm" title="SSR机场 - 5月6日21.8M/S|免费Clash节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Trojan节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 5月6日21.8M/S|免费Clash节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Trojan节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-20-clash-meta-github.htm" title="SSR机场 - 4月20日18.1M/S|免费SSR节点/Clash节点/Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 4月20日18.1M/S|免费SSR节点/Clash节点/Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-24-clash-meta-github.htm" title="SSR机场 - 4月24日22M/S|免费Singbox节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 4月24日22M/S|免费Singbox节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点节点推荐，V2rayC梯子购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-4-26-clash-verge-rev-windows.htm" title="SSR机场 - 4月26日19M/S|免费Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 4月26日19M/S|免费Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-20-clash-stash.htm" title="SSR机场 - 3月20日19.3M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 3月20日19.3M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-16-clash-verge-rev-nodes.htm" title="SSR机场 - 3月16日20.7M/S|免费Trojan节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 3月16日20.7M/S|免费Trojan节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-10-node-share.htm" title="SSR机场 - 3月10日18.6M/S|免费V2ray节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点/Clash节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 3月10日18.6M/S|免费V2ray节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点/Clash节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-21-clash-verge-rev-nodes.htm" title="SSR机场 - 4月21日23M/S|免费V2ray节点/Clash节点/Trojan节点/Singbox节点/Shadowrocket节点/SSR节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 4月21日23M/S|免费V2ray节点/Clash节点/Trojan节点/Singbox节点/Shadowrocket节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-8-clash-stash.htm" title="SSR机场 - 5月8日22.3M/S|免费Trojan节点/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 5月8日22.3M/S|免费Trojan节点/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-13-clash-verge-rev-node-github.htm" title="SSR机场 - 4月13日19M/S|免费Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Trojan节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 4月13日19M/S|免费Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Trojan节点节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-12-free-node-subscribe.htm" title="SSR机场 - 4月12日22.2M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点节点推荐，V2rayC梯子购买推荐">SSR机场 - 4月12日22.2M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点节点推荐，V2rayC梯子购买推荐</a></li>
                     </ul>
     </div>
 </div>
@@ -430,10 +430,10 @@ A5：下载官方渠道的软件，避免使用未知来源，设置复杂密码
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">22</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
+                <h4><span class="badge" style="float: right;">11</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-03/" title="2026-03 归档">2026-03</a></h4>
+                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
             </li>
                     </ul>
     </div>
